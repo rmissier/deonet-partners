@@ -5,19 +5,24 @@ description = "System for retrieving third party orders and placing them in an E
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "asyncssh>=2.20.0",  # For async SFTP connections
-    "httpx>=0.28.0",    # For async REST API calls
-    "pydantic>=2.10.0",  # For data validation and serialization
-    "dependency-injector>=4.46.0",  # For dependency injection
+    "asyncssh>=2.20.0", # For async SFTP connections
+    "httpx>=0.28.0", # For async REST API calls
+    "pydantic[email]>=2.10.0", # For data validation and serialization
+    "dependency-injector>=4.46.0", # For dependency injection
     "fastapi>=0.115.0", # For REST API endpoints (optional for monitoring)
-    "uvicorn>=0.34.0",  # ASGI server for FastAPI
-    "pydifact>=0.1.8",  # For parsing EDIFACT messages
-    "python-dateutil>=2.9.0",  # For date parsing
+    "uvicorn>=0.34.0", # ASGI server for FastAPI
+    "pydifact>=0.1.8", # For parsing EDIFACT messages
+    "python-dateutil>=2.9.0", # For date parsing
+    "python-dotenv>=1.1.0",
+    "psutil>=7.0.0",
+    "phonenumbers>=9.0.2",
 ]
 
 [dependency-groups]
 dev = [
-    "pytest>=8.3.0",
-    "pytest-asyncio>=0.25.0",
+    "pytest>=8.3.5",
+    "pytest-asyncio>=0.25.3",
+    "pytest-httpx>=0.35.0",
+    "pytest-mock>=3.14.0",
 ]
 
